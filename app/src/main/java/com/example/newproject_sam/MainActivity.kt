@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnshare: Button
     private lateinit var btnmpesa: Button
     private lateinit var btncall:Button
+    private lateinit var btnweb: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         btnshare = findViewById(R.id.BtnSHARE)
         btnmpesa = findViewById(R.id.BtnMPESA)
         btncall = findViewById(R.id.BtnCALL)
+        btnweb = findViewById(R.id.BTNweb)
 
         btnsms.setOnClickListener {
 
@@ -53,12 +55,9 @@ class MainActivity : AppCompatActivity() {
             simToolKitintent?.let { startActivity(it) }
         }
 
-        btncall.setOnClickListener {
-            val callintent = Intent(Intent.ACTION_CALL, Uri.parse())
-            if (ContextCompat.checkSelfPermission(
-                    this@MainActivity,
-                    android.Manifest.permission.CALL_PHONE
-            ))
+        btnweb.setOnClickListener {
+            val gotowebsite = Intent(this, Website_activity::class.java)
+            startActivity(gotowebsite)
         }
 
     }

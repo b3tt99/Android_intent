@@ -10,8 +10,8 @@
         android:id="@+id/BtnSMS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="111dp"
         android:text="SMS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,49 +20,59 @@
         android:id="@+id/BtnEMAIL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginTop="108dp"
         android:text="EMAIL"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BtnSHARE"
+        app:layout_constraintStart_toStartOf="@+id/BtnSHARE"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/BtnCAMERA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="3dp"
         android:text="CAMERA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/BTNweb"
+        app:layout_constraintTop_toBottomOf="@+id/BTNweb" />
 
     <Button
         android:id="@+id/BtnSHARE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="259dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="83dp"
         android:text="SHARE"
-        app:layout_constraintEnd_toEndOf="@+id/BtnCALL"
-        app:layout_constraintStart_toStartOf="@+id/BtnCALL"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnEMAIL" />
 
     <Button
         android:id="@+id/BtnMPESA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginBottom="48dp"
         android:text="MPESA"
-        app:layout_constraintBottom_toBottomOf="@+id/BtnCALL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BtnCALL" />
+        app:layout_constraintBottom_toTopOf="@+id/BtnCAMERA"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/BtnCALL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
         android:text="CALL"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnSMS" />
+
+    <Button
+        android:id="@+id/BTNweb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="59dp"
+        android:text="bujbubju"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BtnSHARE" />
 </androidx.constraintlayout.widget.ConstraintLayout>
